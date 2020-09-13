@@ -8,7 +8,7 @@ function sendTweet() {
         body: tweetBody,
         userId: 1
 
-    };
+    }
     let ajax = new XMLHttpRequest();
     ajax.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 201) {
@@ -20,7 +20,7 @@ function sendTweet() {
         else {
             document.getElementById("form").innerHTML = "Something went wrong";
         }
-    }
+    };
 
     ajax.open("POST", "https://jsonplaceholder.typicode.com/posts", true);
     ajax.setRequestHeader("Content-Type", "application/json");
@@ -40,7 +40,7 @@ function updateTweet() {
         body: tweetBody,
         userId: 1
 
-    };
+    }
     let ajax = new XMLHttpRequest();
     ajax.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -54,7 +54,7 @@ function updateTweet() {
 
         }
 
-    }
+    };
 
     ajax.open("PATCH", "https://jsonplaceholder.typicode.com/posts/1", true);
     ajax.setRequestHeader("Content-Type", "application/json");
@@ -80,7 +80,7 @@ function deleteTweet() {
 
         }
 
-    }
+    };
 
     ajax.open("DELETE", "https://jsonplaceholder.typicode.com/posts/1", true);
     ajax.setRequestHeader("Content-Type", "application/json");
@@ -111,7 +111,7 @@ function readTweet() {
 
         }
 
-    }
+    };
 
     ajax.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
     ajax.setRequestHeader("Content-Type", "application/json");
@@ -143,7 +143,7 @@ function readComments() {
 
         }
 
-    }
+    };
 
     ajax.open("GET", "https://jsonplaceholder.typicode.com/comments", true);
     ajax.setRequestHeader("Content-Type", "application/json");
